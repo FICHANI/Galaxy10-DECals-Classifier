@@ -1,4 +1,3 @@
-# src/utils.py — add at the very top, BEFORE importing numpy/sklearn
 import os
 
 def configure_cpu_only_environment():
