@@ -228,7 +228,10 @@ Galaxy10-DECals-Classifier/
 │   ├── raw/                   # External HDF5 dataset (not committed)
 │   ├── processed/              # Generated feature and label arrays
 │   └── splits/                 # Experiment split artifacts, if generated
-│
+|
+├── notebooks/
+│   └── Galaxy10_DECals_Classifier.ipynb
+|
 ├── src/
 │   ├── exploration.py          # Dataset exploration
 │   ├── processing/             # Image processing utilities
