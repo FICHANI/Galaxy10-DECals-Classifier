@@ -1,0 +1,72 @@
+[log] writing to results/logs/run_20261112_095526.log
+
+=== FEATURES ===
+  shape     : (9334, 3072)
+  dtype     : float32
+  min/max   : 0.0045 / 1.0000
+  mean/std  : 0.1630 / 0.1014
+  NaN/Inf   : False / False
+  zero-var columns: 0
+
+=== LABELS ===
+  0 Disturbed                     1000  ████████████████████
+  1 Merging                       1000  ████████████████████
+  2 Round Smooth                  1000  ████████████████████
+  3 In-between Round Smooth       1000  ████████████████████
+  4 Cigar Shaped Smooth            334  ██████
+  5 Barred Spiral                 1000  ████████████████████
+  6 Unbarred Tight Spiral         1000  ████████████████████
+  7 Unbarred Loose Spiral         1000  ████████████████████
+  8 Edge-on without Bulge         1000  ████████████████████
+  9 Edge-on with Bulge            1000  ████████████████████
+
+=== QUICK SANITY CLASSIFIER ===
+/content/drive/MyDrive/galaxy10
+[H[2J==================================================================
+              GALAXY10 — POST-PIPELINE TOOL
+==================================================================
+    Analysis · Diagnostics · CNN · Predictions
+==================================================================
+
+[!] Cannot import config — are you in the project root?
+
+MENU
+---------------------------------------------
+1. Full analysis (headline + metrics + learning curve)
+2. Fast analysis (skip learning curve)
+3. Learning curve only
+4. Diagnostics — is the pipeline producing real signal?
+5. Compare classical vs CNN
+6. Train the CNN (ResNet18)
+7. Evaluate CNN on the test set
+8. Predict a single image (CNN)
+9. Predict a folder of images (CNN)
+
+0. Exit
+---------------------------------------------
+
+Select an option: /content/drive/MyDrive/galaxy10
+[H[2J==================================================================
+              GALAXY10 — POST-PIPELINE TOOL
+==================================================================
+    Analysis · Diagnostics · CNN · Predictions
+==================================================================
+
+[!] Cannot import config — are you in the project root?
+
+MENU
+---------------------------------------------
+1. Full analysis (headline + metrics + learning curve)
+2. Fast analysis (skip learning curve)
+3. Learning curve only
+4. Diagnostics — is the pipeline producing real signal?
+5. Compare classical vs CNN
+6. Train the CNN (ResNet18)
+7. Evaluate CNN on the test set
+8. Predict a single image (CNN)
+9. Predict a folder of images (CNN)
+
+0. Exit
+---------------------------------------------
+
+Select an option: 

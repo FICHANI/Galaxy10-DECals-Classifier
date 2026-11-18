@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+3Point14venv
+
+# Secrets
+.env
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large Galaxy10 research files - retained locally
+data/raw/Galaxy10_DECals.h5
+data/processed/galaxy_features.npy
+models/checkpoints/session.pkl
+data/raw/Galaxy10_DECals.h5

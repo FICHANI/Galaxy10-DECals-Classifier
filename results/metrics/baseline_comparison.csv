@@ -1,0 +1,2 @@
+baseline_accuracy,model_accuracy,absolute_gain,relative_gain_pct,verdict
+0.10706638115631692,0.5396145610278372,0.4325481798715203,403.9999999999999,Strong improvement over baseline.

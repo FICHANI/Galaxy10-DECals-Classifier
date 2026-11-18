@@ -1,0 +1,24 @@
+[H[2J==================================================================
+              GALAXY10 — POST-PIPELINE TOOL
+==================================================================
+    Analysis · Diagnostics · CNN · Predictions
+==================================================================
+
+[!] Cannot import config — are you in the project root?
+
+MENU
+---------------------------------------------
+1. Full analysis (headline + metrics + learning curve)
+2. Fast analysis (skip learning curve)
+3. Learning curve only
+4. Diagnostics — is the pipeline producing real signal?
+5. Compare classical vs CNN
+6. Train the CNN (ResNet18)
+7. Evaluate CNN on the test set
+8. Predict a single image (CNN)
+9. Predict a folder of images (CNN)
+
+0. Exit
+---------------------------------------------
+
+Select an option: 
