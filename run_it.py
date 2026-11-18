@@ -199,8 +199,7 @@ def action_train_cnn():
     designer = DesignExperiment()
     tr, va, te = designer.CreateStratifiedTrainingValidationAndTestSetWithAFixedRandomSeed(labels)
 
-    #h5_default = str(ProjectConfig.DATA_PATH)
-    h5_default =  os.path.expanduser("~/data/Galaxy10_DECals.h5")
+    h5_default = str(ProjectConfig.DATA_PATH)
     h5 = input(f"\n  HDF5 path [{h5_default}]: ").strip() or h5_default
 
     from src.cnn.train import train_cnn, plot_training_history
