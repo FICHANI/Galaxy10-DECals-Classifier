@@ -1,12 +1,3 @@
-"""
-CNN training: two-phase transfer learning.
-
-Phase 1 — frozen backbone, train classifier head (fast warmup).
-Phase 2 — unfreeze all, fine-tune at low LR with cosine schedule.
-
-Saves the best-validation checkpoint and a per-epoch history CSV.
-"""
-
 import csv
 import copy
 import time
