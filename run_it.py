@@ -1,22 +1,3 @@
-# run_it.py
-"""
-Galaxy10 — secondary interactive entrance.
-
-main.py       → train the classical pipeline (Tasks A–F)
-run_it.py     → analyse, diagnose, run the CNN, predict
-
-This file is post-pipeline: it does not touch state dicts, session
-pickles, or the trainer/evaluator objects. It reads everything it
-needs from disk.
-
-Run:
-    $ python run_it.py
-
-No imports of numpy / sklearn / torch happen at module load — each
-action imports what it needs lazily, so the menu opens instantly and
-works even if torch isn't installed.
-"""
-
 import os
 import sys
 import traceback
@@ -147,16 +128,16 @@ def action_diagnostics():
     print(f"  LogisticRegression accuracy : {acc:.4f}")
 
     if acc < 0.12:
-        print("\n  ⚠️  FEATURES ARE BROKEN")
+        print("\n  [!]  FEATURES ARE BROKEN")
         print("     Accuracy ≈ 10% = random. Check:")
         print("     - FlattenImages double-normalises? (float input /255 again)")
         print("     - Features and labels misaligned?")
         print("     - Resize collapsed the image?")
     elif acc < 0.30:
-        print("\n  ⚠️  Features are weak but carry some signal.")
+        print("\n  [!]  Features are weak but carry some signal.")
         print("     Check class 4 support and training configuration.")
     else:
-        print("\n  ✅ Features carry real signal. Pipeline is healthy.")
+        print("\n  [+] Features carry real signal. Pipeline is healthy.")
 
 
 def action_compare_models():
@@ -205,7 +186,7 @@ def action_train_cnn():
         print(f"  torch : {torch.__version__}")
         print(f"  cuda  : {torch.cuda.is_available()}")
         if not torch.cuda.is_available():
-            print("\n  ⚠️  Training on CPU will take hours.")
+            print("\n  [!]  Training on CPU will take hours.")
             if input("  Continue anyway? (yes/no): ").strip().lower() != "yes":
                 return
     except ImportError:
@@ -354,7 +335,7 @@ def action_predict_one():
               f"{probs[i]:.4f}  {bar}")
 
     if result["confidence"] < 0.50:
-        print("\n  ⚠️  Low confidence — model may not have seen this morphology.")
+        print("\n  [!]  Low confidence — model may not have seen this morphology.")
 
 
 def action_predict_folder():
