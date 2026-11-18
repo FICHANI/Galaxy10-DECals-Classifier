@@ -77,7 +77,7 @@ class ProcessImage:
             "2. Pixel values must be numeric and ML-friendly.\n"
             "3. g/r/z channels retain their scientific meaning.\n"
             "4. Flattened arrays must have a fixed feature count.\n"
-            "5. Preprocessing must be identical at train and infer time."
+            "5. Preprocessing must be identical at train and infer time.\n"
         )
         explanation = (
             "Why image processing is required for Galaxy10 DECals\n"
@@ -130,15 +130,6 @@ class ProcessImage:
             yield resized
 
     # ------------------------------------------------------------------
-    '''def FlattenImages(self, images):
-        """(N, 32, 32, 3) → (N, 3072) float32 pixel features."""
-        images = np.asarray(images)
-        if images.dtype == np.uint8:
-            images = images.astype(np.float32) / ProjectConfig.NORMALIZE_SCALE
-        else:
-            images = images.astype(np.float32, copy=False)
-        return images.reshape(len(images), -1)'''
-
     def FlattenImages(self, images):
         """
         (N, 32, 32, 3) → (N, 3072) float32.
