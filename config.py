@@ -6,7 +6,6 @@ class ProjectConfig:
     # ---------- paths ----------
     ROOT             = Path(__file__).resolve().parent
     DATA_PATH        = ROOT / "data/raw/Galaxy10_DECals.h5"
-    #DATA_PATH = Path("/content/Galaxy10_DECals.h5")
     PROCESSED_PATH   = ROOT / "data/processed"
     SPLIT_PATH       = ROOT / "data/splits"
     RESULTS_PATH     = ROOT / "results"
