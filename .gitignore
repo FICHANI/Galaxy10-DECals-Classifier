@@ -32,3 +32,5 @@ models/checkpoints/session.pkl
 data/raw/Galaxy10_DECals.h5
 __pycache__/
 *.pyc
+__pycache__/
+*.pyc
