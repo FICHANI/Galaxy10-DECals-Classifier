@@ -51,6 +51,20 @@ class ProjectConfig:
     ]
     MAX_SAMPLES_PER_CLASS   = 1000    # balance cap (memory + speed)
 
+    # ---------- group map ----------
+    GROUP_MAP = {
+        0: 0,   # Disturbed
+        1: 1,   # Merging
+        2: 2,   # Round Smooth
+        3: 3,   # In-between Round Smooth
+        4: 4,   # Cigar Shaped Smooth
+        5: 5,   # Barred Spiral
+        6: 6,   # Unbarred Tight Spiral
+        7: 7,   # Unbarred Loose Spiral
+        8: 8,   # Edge-on without Bulge
+        9: 8,   # Edge-on with Bulge
+    }
+
     # ---------- split ratios ----------
     TRAIN_SIZE        = 0.70
     VALIDATION_SIZE   = 0.15
