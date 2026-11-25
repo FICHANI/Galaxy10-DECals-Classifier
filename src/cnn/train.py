@@ -140,6 +140,7 @@ def train_cnn(train_idx, val_idx,
             if verbose:
                 print(f"    ↳ new best: {best_acc:.4f}")
 
+
     # Safety checkpoint — survives interruption
     torch.save(
         model.state_dict(),
@@ -199,6 +200,16 @@ def train_cnn(train_idx, val_idx,
     model.to("cpu")
 
     ProjectConfig.CNN_MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+    # FIX: verify the live model is trained, then save it 
+    live_std = model.fc.weight.std().item()
+    print(f"[SAVE] live fc.std = {live_std:.4f}")
+    if live_std < 0.05:
+        raise RuntimeError(
+            f"fc.std={live_std:.4f} ≈ random init — model not trained, refusing to save. "
+            f"Check optimizer construction in train_cnn()."
+        )
+    torch.save(model.state_dict(), ProjectConfig.CNN_MODEL_PATH)
+    print(f"[SAVE] ✓ saved trained model (fc.std={live_std:.4f})")
     torch.save(best_state, ProjectConfig.CNN_MODEL_PATH)
 
     with open(ProjectConfig.CNN_HISTORY_PATH, "w", newline="") as f:

@@ -19,7 +19,7 @@ class ProjectConfig:
     CNN_BATCH_SIZE       = 16      # was 32 — smaller = safer on WSL memory
     CNN_NUM_WORKERS      = 2       # keep 2 for HDF5 read parallelism
     CNN_EPOCHS_HEAD      = 1       # was 3  — 1 warmup epoch is enough
-    CNN_EPOCHS_FINETUNE  = 3       # was 15 — 3 fine-tune epochs
+    CNN_EPOCHS_FINETUNE  = 2       # was 15 — 3 fine-tune epochs
     CNN_LR_HEAD          = 1e-3
     CNN_LR_FINETUNE      = 1e-4
     CNN_WEIGHT_DECAY     = 1e-4

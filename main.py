@@ -34,7 +34,7 @@ def clear_terminal():
 
 def terminal_pause():
     input("\nPress ENTER to return to the main menu...")
-
+    
 
 def terminal_header():
     clear_terminal()

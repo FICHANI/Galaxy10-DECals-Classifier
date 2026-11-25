@@ -1,6 +1,6 @@
 config,model,val_accuracy,fit_seconds,pred_seconds,C,n_estimators
-linear_svc_C0.01,linear_svc,0.33071428571428574,22.78,0.01,0.01,
-linear_svc_C0.1,linear_svc,0.31642857142857145,43.34,0.02,0.1,
-linear_svc_C1.0,linear_svc,0.25857142857142856,90.66,0.02,1.0,
-logistic_C1.0,logistic,0.33,119.04,0.01,1.0,
-random_forest_200,random_forest,0.5357142857142857,11.33,0.16,,200.0
+linear_svc_C0.01,linear_svc,0.22642857142857142,96.05,0.03,0.01,
+linear_svc_C0.1,linear_svc,0.205,237.93,0.02,0.1,
+linear_svc_C1.0,linear_svc,0.2,3923.77,0.18,1.0,
+logistic_C1.0,logistic,0.23142857142857143,100.12,0.03,1.0,
+random_forest_200,random_forest,0.5357142857142857,13.07,0.15,,200.0
